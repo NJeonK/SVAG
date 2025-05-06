@@ -1,17 +1,20 @@
-<!-- templates/base.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>{% block title %}SVAG{% endblock %}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}SVAG{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <header>
-        <h1>SVAG - Sistema de Verificación de Asistencia</h1>
-    </header>
-    <main>
-        {% block content %}{% endblock %}
-    </main>
+  <header class="header">
+    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo SVAG" class="logo">
+    <h1>SVAG</h1>
+    <p>Sistema de Verificación de Asistencia y Gestión</p>
+  </header>
+
+  <main class="main">
+    {% block content %}{% endblock %}
+  </main>
 </body>
 </html>

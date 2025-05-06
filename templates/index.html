@@ -5,4 +5,9 @@
 {% block content %}
 <h2>Bienvenido al sistema SVAG</h2>
 <p>Escanea tu tarjeta RFID para registrar tu asistencia.</p>
+
+<div style="margin-top: 20px;">
+    <a href="{{ url_for('login_maestro') }}"><button>Acceso Maestros</button></a>
+    <a href="{{ url_for('login_alumno') }}"><button>Acceso Alumnos</button></a>
+</div>
 {% endblock %}
